@@ -1,4 +1,4 @@
-package es.unileon.InteresesOrdinarios.web;
+package es.unileon.springapp.web;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,7 +13,7 @@ import javax.validation.Valid;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import es.unileon.InteresesOrdinarios.service.*;
+import es.unileon.springapp.service.*;
 
 /**
  * @author Paula

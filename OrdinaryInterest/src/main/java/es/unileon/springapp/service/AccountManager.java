@@ -1,9 +1,10 @@
-package es.unileon.InteresesOrdinarios.service;
+package es.unileon.springapp.service;
 
 import java.io.Serializable;
 
 
-import es.unileon.InteresesOrdinarios.domain.Account;
+
+import es.unileon.springapp.domain.Account;
 
 
 /**

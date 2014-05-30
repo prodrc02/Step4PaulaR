@@ -1,4 +1,4 @@
-package es.unileon.InteresesOrdinarios.web;
+package es.unileon.springapp.web;
 
 import java.io.IOException;
 import java.util.Date;
@@ -16,7 +16,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import es.unileon.InteresesOrdinarios.service.AccountManager;
+import es.unileon.springapp.service.AccountManager;
 
 /**
  * @author Paula
@@ -24,28 +24,28 @@ import es.unileon.InteresesOrdinarios.service.AccountManager;
  */
 
 
+
 /**
  * 
- * Class taken of the 'springapp' example adapted to the application
+ *  Class taken of the 'springapp' example adapted to the application
  *
  */
 @Controller
-public class AfterInterestController {
+public class BeforeInterestController {
 
 	protected final Log logger = LogFactory.getLog(getClass());
 
 	@Autowired
 	private AccountManager accountManager;
-
-	/**
-	 * 
-	 * @param request
-	 * @param response
-	 * @return new ModelAndView("movementsAfterInterest", "model", myModel)
-	 * @throws ServletException
-	 * @throws IOException
-	 */
-	@RequestMapping(value = "/movementsAfterInterest.htm")
+/**
+ * 
+ * @param request
+ * @param response
+ * @return new ModelAndView("movementsBeforeInterest", "model", myModel)
+ * @throws ServletException
+ * @throws IOException
+ */
+	@RequestMapping(value = "/movementsBeforeInterest.htm")
 	public ModelAndView handleRequest(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 
@@ -56,15 +56,17 @@ public class AfterInterestController {
 		myModel.put("now", now);
 		myModel.put("account", this.accountManager.getAccount());
 
-		return new ModelAndView("movementsAfterInterest", "model", myModel);
+		return new ModelAndView("movementsBeforeInterest", "model", myModel);
 	}
-
+	
+	
+	
 	/**
 	 * 
 	 * @param accountManager
 	 */
+
 	public void setAccountManager(AccountManager accountManager) {
 		this.accountManager = accountManager;
 	}
-
 }

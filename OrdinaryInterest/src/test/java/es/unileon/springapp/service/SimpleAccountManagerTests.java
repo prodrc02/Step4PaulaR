@@ -1,4 +1,4 @@
-package es.unileon.InteresesOrdinarios.service;
+package es.unileon.springapp.service;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -11,7 +11,8 @@ import java.util.GregorianCalendar;
 import org.junit.Before;
 import org.junit.Test;
 
-import es.unileon.InteresesOrdinarios.domain.Account;
+import es.unileon.springapp.domain.Account;
+import es.unileon.springapp.service.SimpleAccountManager;
 
 /**
  * @author Paula

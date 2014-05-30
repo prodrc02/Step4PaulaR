@@ -1,4 +1,4 @@
-package es.unileon.InteresesOrdinarios.domain;
+package es.unileon.springapp.domain;
 
 import java.io.Serializable;
 import java.util.Date;

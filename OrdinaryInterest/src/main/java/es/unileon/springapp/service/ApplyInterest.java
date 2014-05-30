@@ -1,4 +1,4 @@
-package es.unileon.InteresesOrdinarios.service;
+package es.unileon.springapp.service;
 
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;

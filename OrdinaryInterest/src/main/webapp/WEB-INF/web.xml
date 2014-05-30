@@ -5,10 +5,10 @@
 	xmlns:web="http://java.sun.com/xml/ns/j2ee/web-app_2_5.xsd"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/j2ee/web-app_2_5.xsd">
 
-  <display-name>OrdinaryInterest</display-name>
+  <display-name>Ordinary Interest</display-name>
 
   <servlet>
-    <servlet-name>OrdinaryInterest</servlet-name>
+    <servlet-name>springapp</servlet-name>
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
     <init-param>
        <param-name>contextConfigLocation</param-name>
@@ -18,7 +18,7 @@
   </servlet>
 
   <servlet-mapping>
-    <servlet-name>OrdinaryInterest</servlet-name>
+    <servlet-name>springapp</servlet-name>
     <url-pattern>*.htm</url-pattern>
   </servlet-mapping>
 

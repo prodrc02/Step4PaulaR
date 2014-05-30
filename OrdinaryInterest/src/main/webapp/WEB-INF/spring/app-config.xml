@@ -15,14 +15,14 @@
 
 
 	<bean id="accountManager"
-		class="es.unileon.InteresesOrdinarios.service.SimpleAccountManager">
+		class="es.unileon.springapp.service.SimpleAccountManager">
 		<property name="account">
 
 			<ref bean="account1" />
 		</property>
 	</bean>
 
-	<bean id="account1" class="es.unileon.InteresesOrdinarios.domain.Account">
+	<bean id="account1" class="es.unileon.springapp.domain.Account">
 		<property name="accountDescription" value="1234-2096-33-9517408632 Titular: Paula" />
 		<property name="movementBalance1" value="15200.80" />
 		<property name="dateMov1">
@@ -68,7 +68,7 @@
 
 	<!-- Scans the classpath of this application for @Components to deploy as 
 		beans -->
-	<context:component-scan base-package="es.unileon.InteresesOrdinarios.web" />
+	<context:component-scan base-package="es.unileon.springapp.web" />
 
 	<!-- Configures the @Controller programming model -->
 	<mvc:annotation-driven />

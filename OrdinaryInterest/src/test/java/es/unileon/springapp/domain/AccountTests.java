@@ -1,4 +1,4 @@
-package es.unileon.InteresesOrdinarios.domain;
+package es.unileon.springapp.domain;
 
 import static org.junit.Assert.*;
 
@@ -8,7 +8,7 @@ import java.util.GregorianCalendar;
 import org.junit.Before;
 import org.junit.Test;
 
-import es.unileon.InteresesOrdinarios.domain.Account;
+import es.unileon.springapp.domain.Account;
 
 /**
  * @author Paula
