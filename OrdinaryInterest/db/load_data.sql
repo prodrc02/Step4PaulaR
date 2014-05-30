@@ -1,0 +1,1 @@
+INSERT INTO account (id, accountDescription, dateMov1, movementBalance1, dateMov2, movementBalance2, dateMov3, movementBalance3, dateMov4, movementBalance4, dateMov5, movementBalance5) values(1, '1234-2096-33-9517408632 Titular: Paula',2014/04/24, 15000.80, 2014/04/30, 15000.80, 2014/05/5, 16536.65, 2014/05/12, 16412.78, 2014-05-16, 36412.78);
