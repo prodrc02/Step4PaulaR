@@ -1,4 +1,4 @@
-package es.unileon.springapp.domain;
+package es.unileon.intereses.domain;
 
 import static org.junit.Assert.*;
 
@@ -8,7 +8,7 @@ import java.util.GregorianCalendar;
 import org.junit.Before;
 import org.junit.Test;
 
-import es.unileon.springapp.domain.Account;
+import es.unileon.intereses.domain.Account;
 
 /**
  * @author Paula
@@ -23,7 +23,7 @@ public class AccountTests {
 	private static Double FINAL_BALANCE_MOV3 = new Double(1600.20);
 	private static Double FINAL_BALANCE_MOV4 = new Double(2356.65);
 	private static Double FINAL_BALANCE_MOV5 = new Double(30000.00);
-	private static Double BALANCE_WITH_INTEREST = new Double(30085.77);
+	private static Double BALANCE_WITH_INTEREST = new Double(30088.77);
 	private static Double AMOUNT_TO_INCREASE = new Double(88.77);
 	private static Date DATE_MOV1 = new GregorianCalendar(2014, 4, 24)
 			.getTime();

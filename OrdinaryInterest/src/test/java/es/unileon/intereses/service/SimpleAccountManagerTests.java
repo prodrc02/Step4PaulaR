@@ -1,4 +1,4 @@
-package es.unileon.springapp.service;
+package es.unileon.intereses.service;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -11,8 +11,10 @@ import java.util.GregorianCalendar;
 import org.junit.Before;
 import org.junit.Test;
 
-import es.unileon.springapp.domain.Account;
-import es.unileon.springapp.service.SimpleAccountManager;
+import es.unileon.intereses.domain.Account;
+import es.unileon.intereses.repository.AccountDao;
+import es.unileon.intereses.repository.InMemoryAccountDao;
+import es.unileon.intereses.service.SimpleAccountManager;
 
 /**
  * @author Paula
@@ -52,13 +54,18 @@ public class SimpleAccountManagerTests {
 		account.setDateMov1(DATE_MOV1);
 		account.setDateMov5(DATE_MOV5);
 		
-		accountManager.setAccount(account);
+		
+		
+		AccountDao accountDao = new InMemoryAccountDao(account);
+		accountManager.setAccountDao(accountDao);
+		//accountManager.setAccount(account);
 
 	}
 
 	@Test
 	public void testGetEmptyAccount(){
 		accountManager = new SimpleAccountManager();
+		accountManager.setAccountDao(new InMemoryAccountDao(null));
 		assertNull(accountManager.getAccount());
 	}
 	
@@ -82,6 +89,7 @@ public class SimpleAccountManagerTests {
 	public void testApplyInterestWithNullAccount() {
 		try {
 			accountManager = new SimpleAccountManager();
+			accountManager.setAccountDao(new InMemoryAccountDao(null));
 			accountManager.applyInterest(INTEREST);
 		
 		} catch (NullPointerException ex) {
@@ -93,7 +101,8 @@ public class SimpleAccountManagerTests {
 	public void testApplyInterestWithEmptyAccount() {
 		try {
 			accountManager = new SimpleAccountManager();
-			accountManager.setAccount(new Account());
+			//accountManager.setAccount(new Account());
+			accountManager.setAccountDao(new InMemoryAccountDao(new Account()));
 		} catch (Exception ex) {
 			fail("Account is empty.");
 		}

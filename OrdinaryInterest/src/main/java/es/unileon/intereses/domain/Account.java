@@ -1,7 +1,15 @@
-package es.unileon.springapp.domain;
+package es.unileon.intereses.domain;
 
 import java.io.Serializable;
 import java.util.Date;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
 
 /**
  * @author Paula
@@ -16,9 +24,17 @@ import java.util.Date;
  * 
  */
 
+@Entity
+@Table(name="accounts")
 public class Account implements Serializable {
 
 	private static final long serialVersionUID = 1L;
+	
+	@Id
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
+	
 	private String accountDescription;
 	private Double movementBalance1;
 	private Double movementBalance2;
@@ -33,6 +49,25 @@ public class Account implements Serializable {
 	private Date dateMov4;
 	private Date dateMov5;
 
+	
+	/**
+	 * @return id 
+	 */
+	public int getId()
+    {
+        return id;
+    }
+
+    
+    /**
+     * @param id
+     */
+    public void setId(int id)
+    {
+        this.id = id;
+    } 
+	
+	
 	/**
 	 * 
 	 * @return accountDescription

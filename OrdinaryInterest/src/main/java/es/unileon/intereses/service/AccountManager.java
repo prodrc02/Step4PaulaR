@@ -1,10 +1,12 @@
-package es.unileon.springapp.service;
+package es.unileon.intereses.service;
 
 import java.io.Serializable;
 
 
 
-import es.unileon.springapp.domain.Account;
+
+
+import es.unileon.intereses.domain.Account;
 
 
 /**

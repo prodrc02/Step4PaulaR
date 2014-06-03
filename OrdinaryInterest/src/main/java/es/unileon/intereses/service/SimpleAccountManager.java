@@ -1,16 +1,22 @@
-package es.unileon.springapp.service;
+package es.unileon.intereses.service;
 
-import es.unileon.springapp.domain.Account;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import es.unileon.intereses.domain.Account;
+import es.unileon.intereses.repository.AccountDao;
 
 /**
  * @author Paula
  *
  */
+@Component
 public class SimpleAccountManager implements AccountManager {
 
 	private static final long serialVersionUID = 1L;
 
-	private Account account;
+	@Autowired
+	private AccountDao accountDao;
 	
 	
 	/**
@@ -20,6 +26,7 @@ public class SimpleAccountManager implements AccountManager {
 	 * @param percentage
 	 */
 	public void applyInterest(int percentage) {
+		Account account = accountDao.getAccountDao();
 		if (account != null) {
 						
 				double amountToIncrease = account.getBalanceAverage()
@@ -30,23 +37,24 @@ public class SimpleAccountManager implements AccountManager {
 
 				account.setAmountToIncrease(amountToIncrease);
 				account.setMovementWithIncrease(newBalance);
+				accountDao.saveAccount(account);
 		}
 	}
 
 	/**
 	 * 
-	 * @return account
+	 * @return account.getAccount()
 	 */
 	public Account getAccount() {
 
-		return account;
+		return accountDao.getAccountDao();
 	}
 
 	/**
 	 * 
 	 * @param account
 	 */
-	public void setAccount(Account account) {
-		this.account = account;
+	public void setAccountDao(AccountDao accountDao) {
+		this.accountDao = accountDao;
 	}
 }

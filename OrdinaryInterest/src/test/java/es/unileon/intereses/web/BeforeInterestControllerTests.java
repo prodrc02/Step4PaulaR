@@ -1,4 +1,4 @@
-package es.unileon.springapp.web;
+package es.unileon.intereses.web;
 
 import java.util.Map;
 
@@ -7,8 +7,10 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 import org.springframework.web.servlet.ModelAndView;
 
-import es.unileon.springapp.service.SimpleAccountManager;
-import es.unileon.springapp.web.BeforeInterestController;
+import es.unileon.intereses.domain.Account;
+import es.unileon.intereses.repository.InMemoryAccountDao;
+import es.unileon.intereses.service.SimpleAccountManager;
+import es.unileon.intereses.web.BeforeInterestController;
 
 /**
  * @author Paula
@@ -26,7 +28,10 @@ public class BeforeInterestControllerTests {
 	@Test
 	public void testHandleRequestView() throws Exception {
 		BeforeInterestController controller = new BeforeInterestController();
-		controller.setAccountManager(new SimpleAccountManager());
+		SimpleAccountManager  spm = new SimpleAccountManager();
+		spm.setAccountDao(new InMemoryAccountDao(new Account()));
+		controller.setAccountManager(spm);
+		//controller.setAccountManager(new SimpleAccountManager());
 		ModelAndView modelAndView = controller.handleRequest(null, null);
 		assertEquals("movementsBeforeInterest", modelAndView.getViewName());
 		assertNotNull(modelAndView.getModel());

@@ -1,4 +1,4 @@
-package es.unileon.springapp.web;
+package es.unileon.intereses.web;
 
 import java.io.IOException;
 import java.util.Date;
@@ -16,7 +16,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import es.unileon.springapp.service.AccountManager;
+import es.unileon.intereses.service.AccountManager;
 
 /**
  * @author Paula

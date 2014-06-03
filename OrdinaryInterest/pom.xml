@@ -2,10 +2,10 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>es.unileon</groupId>
-  <artifactId>springapp</artifactId>
+  <artifactId>OrdinaryInterest</artifactId>
   <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
-  <name>springapp Maven Webapp</name>
+  <name>OrdinaryInterest Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
@@ -85,6 +85,6 @@
     <finalName>OrdinaryInterest</finalName>
   </build>
   <properties>
-  	<org.springframework.version>4.0.4.RELEASE</org.springframework.version>
+  	<org.springframework.version>4.0.3.RELEASE</org.springframework.version>
   </properties>
 </project>
