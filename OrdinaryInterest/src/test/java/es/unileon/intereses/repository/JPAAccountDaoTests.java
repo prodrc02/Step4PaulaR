@@ -2,8 +2,6 @@ package es.unileon.intereses.repository;
 
 import static org.junit.Assert.*;
 
-import java.util.Date;
-import java.util.GregorianCalendar;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -65,7 +63,7 @@ public class JPAAccountDaoTests {
 		assertEquals(acc2.getMovementBalance5(), 30000.00, 0);
 		assertEquals(acc2.getMovementWithIncrease(), 30088.77, 0);
 		assertEquals(acc2.getAmountToIncrease(), 88.77, 0);
-	acc2.setMovementBalance1(movementBalance1);
+		acc2.setMovementBalance1(movementBalance1);
 		acc2.setMovementBalance2(movementBalance2);
 		acc2.setMovementBalance3(movementBalance3);
 		acc2.setMovementBalance4(movementBalance4);
